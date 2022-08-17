@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-isabelline;
+  @apply text-eerie-black;
+  &.dark {
+    @apply bg-eerie-black;
+    @apply text-isabelline;
+  }
+
+  font-family: "Inter", sans-serif;
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.fade {
+  @apply transition-all duration-300;
+  &-start {
+    @apply opacity-0 translate-y-8;
+  }
+}
